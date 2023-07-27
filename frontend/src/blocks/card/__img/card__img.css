@@ -1,0 +1,8 @@
+.card__img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  cursor: pointer;
+  background-color: #000; /*это очень крутое замечание, я даже не подумала о таком сценарии!*/
+}

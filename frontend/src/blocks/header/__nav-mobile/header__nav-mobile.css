@@ -1,0 +1,25 @@
+.header__nav-mobile {
+  transform: translateY(-700px);
+}
+.header__nav-mobile.active {
+  max-width: 88%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+  transform: translateY(0);
+  transition: transform .3s ease-out;
+}
+@media screen and (min-width: 600px){
+  .header__nav-mobile.active {
+   display: none;
+  }
+}
+@media screen and (max-width: 425px) {
+  .header__nav-mobile.active {
+    max-width: 100%;
+  }
+}

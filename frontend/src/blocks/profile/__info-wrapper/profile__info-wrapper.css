@@ -1,0 +1,11 @@
+.profile__info-wrapper {
+  display: flex;
+  gap: 18px;
+}
+@media screen and (max-width: 768px) {
+  .profile__info-wrapper {
+    justify-content: center;
+    gap: 10px;
+    margin: 0 19px;
+  }
+}

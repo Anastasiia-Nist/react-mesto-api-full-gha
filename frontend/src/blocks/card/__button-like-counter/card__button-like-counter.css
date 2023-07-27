@@ -1,0 +1,9 @@
+.card__button-like-counter {
+    max-height: 13px;
+    color: black;
+    text-align: center;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 0;
+}

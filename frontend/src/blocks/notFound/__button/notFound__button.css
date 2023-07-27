@@ -1,0 +1,16 @@
+.notFound__button {
+  padding: 4px 10px;
+  background-color: transparent;
+  border-radius: 2px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid #fff;
+  
+}
+.notFound__button:hover {
+    opacity: 0.6;
+}

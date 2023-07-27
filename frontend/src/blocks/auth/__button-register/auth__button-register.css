@@ -1,0 +1,22 @@
+.auth__button-register {
+  padding: 14px 0;
+  width: 358px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 2px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #000000;
+  cursor: pointer;
+  margin-top: 100px;
+}
+.auth__button-register:hover {
+  opacity: 0.8;
+}
+@media screen and (max-width: 425px) {
+  .auth__button-register {
+    width: 260px;
+  }
+}

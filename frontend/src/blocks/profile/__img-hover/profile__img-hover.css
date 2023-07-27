@@ -1,0 +1,12 @@
+.profile__img-hover {
+  pointer-events: none;
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 120px;
+  max-width: 120px;
+  object-fit: contain;
+  padding: 50px;
+}

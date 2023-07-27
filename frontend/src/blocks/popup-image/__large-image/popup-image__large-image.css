@@ -1,0 +1,12 @@
+.popup-image__large-image {
+  max-width: 64vw;
+  max-height: 75vh;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 620px) {
+  .popup-image__large-image {
+    max-width: 75vw;
+  }
+}

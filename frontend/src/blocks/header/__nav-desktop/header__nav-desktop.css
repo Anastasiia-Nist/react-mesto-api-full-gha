@@ -1,0 +1,9 @@
+.header__nav-desktop {
+  display: flex;
+  gap: 24px;
+}
+@media screen and (max-width: 600px) {
+  .header__nav-desktop {
+    display: none;
+  }
+}

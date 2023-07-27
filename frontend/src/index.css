@@ -1,0 +1,79 @@
+/* шрифты */
+@import url(./vendor/normalize.css);
+@import url(./vendor/fonts/fonts.css);
+
+@import url(./blocks/page/page.css);
+
+@import url(./blocks/header/header.css);
+@import url(./blocks/header/__logo/header__logo.css);
+@import url(./blocks/header/__link/header__link.css);
+@import url(./blocks/header/__nav-desktop/header__nav-desktop.css);
+@import url(./blocks/header/__nav-mobile/header__nav-mobile.css);
+@import url(./blocks/header/__email/header__email.css);
+@import url(./blocks/header/__button/_type/_logout/header__button_type_logout.css);
+@import url(./blocks/header/__button/_type/_burger/header__button_type_burger.css);
+@import url(./blocks/header/__span/header__span.css);
+
+@import url(./blocks/button-save/button-save.css);
+/* регистрация */
+@import url(./blocks/auth/__title/auth__title.css);
+@import url(./blocks/auth/auth.css);
+@import url(./blocks/auth/__form/auth__form.css);
+@import url(./blocks/auth/__input/auth__input.css);
+@import url(./blocks/auth/__button-register/auth__button-register.css);
+@import url(./blocks/auth/__link/auth__link.css);
+/* профиль User */
+@import url(./blocks/profile/profile.css);
+@import url(./blocks/profile/__img/profile__img.css);
+@import url(./blocks/profile/__avatar/profile__avatar.css);
+@import url(./blocks/profile/__img-hover/profile__img-hover.css);
+@import url(./blocks/profile/__info/profile__info.css);
+@import url(./blocks/profile/__info-wrapper/profile__info-wrapper.css);
+@import url(./blocks/profile/__name/profile__name.css);
+@import url(./blocks/profile/__button-edit/profile__button-edit.css);
+@import url(./blocks/profile/__career/profile__career.css);
+@import url(./blocks/profile/__button-add/profile__button-add.css);
+
+/* попапы */
+@import url(./blocks/popup/popup.css);
+@import url(./blocks/popup/__container/popup__container.css);
+@import url(./blocks/popup/__title/popup__title.css);
+@import url(./blocks/popup/__button-close/popup__button-close.css);
+@import url(./blocks/popup/_opened/popup_opened.css);
+
+@import url(./blocks/popup/__img/popup__img.css);
+@import url(./blocks/popup/samp/popup__samp.css);
+
+@import url(./blocks/popup-image/popap-image.css);
+@import url(./blocks/popup-image/__container/popup-image__container.css);
+@import url(./blocks/popup-image/__figure/popup-image__figure.css);
+@import url(./blocks/popup-image/__large-image/popup-image__large-image.css);
+@import url(./blocks/popup-image/__title-image/popup-image__title-image.css);
+
+/* формы */
+@import url(./blocks/form/form.css);
+@import url(./blocks/form/__section/form__section.css);
+@import url(./blocks/form/__input/form__input.css);
+@import url(./blocks/form/__button-save/form__button-save.css);
+@import url(./blocks/form/__input-error/form__input-error.css);
+@import url(./blocks/form/__input-error/_active/form__input-error_active.css);
+@import url(./blocks/form/__input/_invalid/form__input_invalid.css);
+
+/* карточки */
+@import url(./blocks/cards/cards.css);
+@import url(./blocks/card/card.css);
+@import url(./blocks/card/__img/card__img.css);
+@import url(./blocks/card/__info/card__info.css);
+@import url(./blocks/card/__name/card__name.css);
+@import url(./blocks/card/__like-container/card__like-container.css);
+@import url(./blocks/card/__button-like/card__button-like.css);
+@import url(./blocks/card/__button-like-counter/card__button-like-counter.css);
+@import url(./blocks/card/__button-like/_active/card__button-like_active.css);
+@import url(./blocks/card/__button-trash/card__button-trash.css);
+
+@import url(./blocks/footer/footer.css);
+@import url(./blocks/footer/__copywriter/footer__copywriter.css);
+/* 404 */
+@import url(./blocks/notFound/notFound.css);
+@import url(./blocks/notFound/__img/notFound__img.css);
+@import url(./blocks/notFound/__button/notFound__button.css);

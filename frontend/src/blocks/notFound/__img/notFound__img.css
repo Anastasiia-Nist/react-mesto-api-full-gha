@@ -1,0 +1,9 @@
+.notFound__img{
+    object-fit: contain;
+    width: 440px;
+}
+@media screen and (max-width: 500px) {
+    .notFound__img{
+        width: 100%;
+    }
+}
