@@ -1,4 +1,4 @@
-const BASE_URL = "https://auth.nomoreparties.co";
+const BASE_URL = "http://api.mesto-by-anastasiia.nomoredomains.sbs";
 const BASE_HEADERS = {
   Accept: "application/json",
   "Content-Type": "application/json",
@@ -16,15 +16,15 @@ function checkResult(res) {
   return Promise.reject(`Что-то сломалось. Ошибка: ${res.status}`);
 }
 
-export const register = ({ password, email }) => {
+export const register = ({ email, password }) => {
   return request(`signup`, {
     method: "POST",
     headers: BASE_HEADERS,
-    body: JSON.stringify({ password, email }),
+    body: JSON.stringify({ email, password }),
   });
 };
 
-export const authorize = (password, email) => {
+export const authorize = (email, password) => {
   return request(`signin`, {
     method: "POST",
     headers: BASE_HEADERS,

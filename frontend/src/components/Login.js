@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 export function Login(props) {
   const [formValue, setFormValue] = useState({
-    password: "",
     email: "",
+    password: "",
   });
 
   const handleChange = (e) => {
@@ -17,7 +17,7 @@ export function Login(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     props.handleLogin(formValue);
-    setFormValue({ password: "", email: "" });
+    setFormValue({ email: "", password: "" });
   };
 
   return (
