@@ -1,4 +1,5 @@
 const { allowedCors, DEFAULT_ALLOWED_METHODS} = require('../utils/cors')
+
 const corsMiddleware = (req, res, next) => {
   const { origin } = req.headers;
   const { method } = req;
