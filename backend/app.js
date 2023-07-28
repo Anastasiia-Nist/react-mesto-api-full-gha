@@ -6,6 +6,7 @@ const helmet = require('helmet');
 const bodyParser = require('body-parser');
 const { errors } = require('celebrate');
 // const cookieParser = require('cookie-parser');
+const corsMiddleware = require('./middlewares/cors')
 const { signinValidation, signupValidation } = require('./middlewares/validation');
 const authMiddleware = require('./middlewares/auth');
 const errorsMiddleware = require('./middlewares/errors');
@@ -41,6 +42,8 @@ app.use(bodyParser.json());
   req.user = {
     _id: '64a2a1ee8038a3f41b443963',
   };  */
+
+app.use(corsMiddleware);
 
 app.post('/signin', signinValidation, login);
 app.post('/signup', signupValidation, createUser);
