@@ -1,5 +1,5 @@
 {
-  "name": "express-mesto-gha",
+  "name": "backend",
   "version": "1.0.0",
   "description": "server deployment educational project",
   "main": "app.js",
@@ -8,16 +8,8 @@
     "dev": "nodemon app.js",
     "lint": "npx eslint ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Anastasiia-Nist/express-mesto-gha.git"
-  },
   "author": "Anastasiia Nistratova",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Anastasiia-Nist/express-mesto-gha/issues"
-  },
-  "homepage": "https://github.com/Anastasiia-Nist/express-mesto-gha#readme",
   "devDependencies": {
     "eslint": "^8.44.0",
     "eslint-config-airbnb-base": "^15.0.0",
