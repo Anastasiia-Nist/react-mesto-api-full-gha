@@ -15,11 +15,10 @@ const { createUser, login } = require('./controllers/users');
 const usersRouter = require('./routes/users');
 const cardsRouter = require('./routes/cards');
 const { messages } = require('./utils/errors');
+const { SERVER_PORT, DB } = require('./utils/config');
 const NotFoundError = require('./errors/NotFoundError');
 
 const app = express();
-
-const { PORT = 3000, DB_URL = 'mongodb://127.0.0.1:27017/mestodb' } = process.env;
 
 // параметры Express Rate Limit
 const limiter = rateLimit({
@@ -33,7 +32,7 @@ app.use(helmet());
 // ограничение кол-во запросов. Для защиты от DoS-атак.
 app.use(limiter);
 
-mongoose.connect(DB_URL);
+mongoose.connect(DB);
 
 app.use(bodyParser.json());
 
@@ -53,4 +52,4 @@ app.use(errorLogger);
 app.use(errors()); // обработчик ошибок celebrate
 app.use(errorsMiddleware); // централизованный обработчик
 
-app.listen(PORT);
+app.listen(SERVER_PORT);
