@@ -14,7 +14,7 @@ const { createUser, login } = require('./controllers/users');
 const usersRouter = require('./routes/users');
 const cardsRouter = require('./routes/cards');
 const { messages } = require('./utils/errors');
-const { SERVER_PORT, DB } = require('./utils/config');
+const { SERVER_PORT, DB } = require('./env.config');
 const NotFoundError = require('./errors/NotFoundError');
 
 const app = express();
