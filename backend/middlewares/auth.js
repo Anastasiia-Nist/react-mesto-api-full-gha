@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 const UnauthorizedError = require('../errors/UnauthorizedError');
 const { messages } = require('../utils/errors');
+
 const { NODE_ENV, JWT_SECRET } = process.env;
 
 const authMiddleware = (req, res, next) => {
@@ -13,7 +14,7 @@ const authMiddleware = (req, res, next) => {
   let payload;
 
   try {
-    payload = jwt.verify(token, NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret');
+    payload = jwt.verify(token, `${NODE_ENV === 'production' ? JWT_SECRET : 'super-strong-secret'}`);
   } catch (err) {
     throw new UnauthorizedError(messages.unauthorized);
   }
