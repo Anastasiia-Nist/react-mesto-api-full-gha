@@ -1,8 +1,9 @@
 // API
+const jwt = localStorage.getItem("jwt");
 const dataApi = {
-  baseUrl: "https://nomoreparties.co/v1/cohort-64/",
+  baseUrl: "https://api.mesto-by-anastasiia.nomoredomains.sbs",
   headers: {
-      authorization: "3bc753b1-d1b4-4fd5-b226-ffa03d509b4a",
+      Authorization: `Bearer ${jwt}`,
       "Content-Type": "application/json",
     },
 };
@@ -14,7 +15,7 @@ export class Api {
   }
   //
   _request(endpoint, options) {
-    return fetch(`${this._baseUrl}${endpoint}`, options).then(
+    return fetch(`${this._baseUrl}/${endpoint}`, options).then(
       this._checkResult
     );
   }
@@ -92,12 +93,12 @@ export class Api {
 
   changeLikeCardStatus(_id, isLiked) {
     if (isLiked) {
-      return this._request(`/cards/${_id}/likes`, {
+      return this._request(`cards/${_id}/likes`, {
         method: "PUT",
         headers: this._headers,
       });
     } else {
-      return this._request(`/cards/${_id}/likes`, {
+      return this._request(`cards/${_id}/likes`, {
         method: "DELETE",
         headers: this._headers,
       });

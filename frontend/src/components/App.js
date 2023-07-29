@@ -100,8 +100,7 @@ function App() {
     if (jwt) {
       auth
         .checkToken(jwt)
-        .then(({ data }) => {
-          setUserEmail(data.email);
+        .then(() => {
           setIsLoggedIn(true);
           navigate("/", { replace: true });
         })
@@ -115,6 +114,7 @@ function App() {
     if (isLoggedIn) {
       Promise.all([api.getUserInfo(), api.getInitialCards()])
         .then(([currentUser, cards]) => {
+          setUserEmail(currentUser.email);
           setCurrentUser(currentUser);
           setCards(cards);
         })
@@ -179,7 +179,7 @@ function App() {
   }
 
   function handleCardLike(card) {
-    const isLiked = card.likes.some((i) => i._id === currentUser._id);
+    const isLiked = card.likes.some((i) => i === currentUser._id);
     api
       .changeLikeCardStatus(card._id, !isLiked)
       .then((newCard) => {

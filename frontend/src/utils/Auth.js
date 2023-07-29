@@ -1,4 +1,4 @@
-const BASE_URL = "http://api.mesto-by-anastasiia.nomoredomains.sbs";
+const BASE_URL = "https://api.mesto-by-anastasiia.nomoredomains.sbs";
 const BASE_HEADERS = {
   Accept: "application/json",
   "Content-Type": "application/json",
