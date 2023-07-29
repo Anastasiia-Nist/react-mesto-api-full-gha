@@ -8,7 +8,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 62.84.126.150
+IP 62.84.126.150
 
 Frontend https://mesto-by-anastasiia.nomoredomains.sbs
 
