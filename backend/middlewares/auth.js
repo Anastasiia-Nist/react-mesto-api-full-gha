@@ -20,7 +20,7 @@ const authMiddleware = (req, res, next) => {
     throw new UnauthorizedError(messages.unauthorized);
   }
 
-  req.user = payload; // записываем пейлоуд в объект запроса
+  req.user = payload;
   next();
 };
 

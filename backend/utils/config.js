@@ -1,6 +1,11 @@
 require('dotenv').config();
 
-const { NODE_ENV, DB_HOST, PORT, JWT_SECRET } = process.env;
+const {
+  NODE_ENV,
+  DB_HOST,
+  PORT,
+  JWT_SECRET,
+} = process.env;
 
 // задаем переменные с дефолтными (dev) значениями
 const DEV_SECRET = 'some-secret-key';
