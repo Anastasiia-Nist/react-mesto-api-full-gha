@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 const UnauthorizedError = require('../errors/UnauthorizedError');
 const { messages } = require('../utils/errors');
+const SECRET_KEY = require('../utils/config');
 
 const authMiddleware = (req, res, next) => {
   const { authorization } = req.headers;
@@ -12,7 +13,7 @@ const authMiddleware = (req, res, next) => {
   let payload;
 
   try {
-    payload = jwt.verify(token, NODE_ENV === 'production' ? JWT_SECRET : 'some-secret-key');
+    payload = jwt.verify(token, SECRET_KEY);
   } catch (err) {
     throw new UnauthorizedError(messages.unauthorized);
   }
