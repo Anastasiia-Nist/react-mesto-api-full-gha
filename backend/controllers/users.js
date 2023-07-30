@@ -2,7 +2,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 const { messages } = require('../utils/errors');
-const SECRET_KEY = require('../env.config');
+const { SECRET_KEY } = require('../env.config');
 const NotFoundError = require('../errors/NotFoundError');
 
 const getUsers = (req, res, next) => {

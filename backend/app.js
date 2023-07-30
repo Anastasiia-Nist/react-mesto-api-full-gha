@@ -13,20 +13,10 @@ const { createUser, login } = require('./controllers/users');
 const usersRouter = require('./routes/users');
 const cardsRouter = require('./routes/cards');
 const { messages } = require('./utils/errors');
-const {
-  SERVER_PORT,
-  DB,
-  SECRET_KEY,
-  NODE_ENV,
-} = require('./env.config');
+const { SERVER_PORT, DB } = require('./env.config');
 const NotFoundError = require('./errors/NotFoundError');
 
 const app = express();
-
-console.log(SERVER_PORT);
-console.log(DB);
-console.log(SECRET_KEY);
-console.log(NODE_ENV);
 
 // параметры Express Rate Limit
 const limiter = rateLimit({

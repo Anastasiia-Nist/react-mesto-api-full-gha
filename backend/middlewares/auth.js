@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const UnauthorizedError = require('../errors/UnauthorizedError');
 const { messages } = require('../utils/errors');
-const SECRET_KEY = require('../env.config');
+const { SECRET_KEY } = require('../env.config');
 
 const authMiddleware = (req, res, next) => {
   const { authorization } = req.headers;
