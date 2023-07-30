@@ -1,9 +1,7 @@
 // API
-const jwt = localStorage.getItem("jwt");
 const dataApi = {
   baseUrl: "https://api.mesto-by-anastasiia.nomoredomains.sbs",
   headers: {
-      Authorization: `Bearer ${jwt}`,
       "Content-Type": "application/json",
     },
 };
@@ -26,20 +24,27 @@ export class Api {
     }
     return Promise.reject(`Что-то сломалось. Ошибка: ${res.status}`);
   }
+  _getHeaders() {
+    const jwt = localStorage.getItem('jwt');
+    return {
+      Authorization: `Bearer ${jwt}`,
+      ...this._headers,
+    };
+  }
 
   //загружаем информацию о юзере с сервера
   getUserInfo() {
-    return this._request(`users/me/`, { headers: this._headers });
+    return this._request(`users/me/`, { headers: this._getHeaders() });
   }
   //загружаем карточки с сервера
   getInitialCards() {
-    return this._request(`cards/`, { headers: this._headers });
+    return this._request(`cards/`, { headers: this._getHeaders() });
   }
   // отправляем данные юзера на сервер
   patchUserInfo(data) {
     return this._request(`users/me/`, {
       method: "PATCH",
-      headers: this._headers,
+      headers: this._getHeaders(),
 
       body: JSON.stringify({
         name: data.name,
@@ -51,7 +56,7 @@ export class Api {
   postNewCard(data) {
     return this._request(`cards/`, {
       method: "POST",
-      headers: this._headers,
+      headers: this._getHeaders(),
       body: JSON.stringify({
         name: data.name,
         link: data.link,
@@ -63,28 +68,28 @@ export class Api {
   deleteCard(cardId) {
     return this._request(`cards/${cardId}/`, {
       method: "DELETE",
-      headers: this._headers,
+      headers: this._getHeaders(),
     });
   }
   // лайк и дизлайк
   likeCard(cardId) {
     return this._request(`cards/${cardId}/likes`, {
       method: "PUT",
-      headers: this._headers,
+      headers: this._getHeaders(),
     });
   }
 
   dislikeCard(cardId) {
     return this._request(`cards/${cardId}/likes`, {
       method: "DELETE",
-      headers: this._headers,
+      headers: this._getHeaders(),
     });
   }
   // добавление аватара
   patchUserAvatar(avatar) {
     return this._request(`users/me/avatar`, {
       method: "PATCH",
-      headers: this._headers,
+      headers: this._getHeaders(),
       body: JSON.stringify({
         avatar,
       }),
@@ -95,12 +100,12 @@ export class Api {
     if (isLiked) {
       return this._request(`cards/${_id}/likes`, {
         method: "PUT",
-        headers: this._headers,
+        headers: this._getHeaders(),
       });
     } else {
       return this._request(`cards/${_id}/likes`, {
         method: "DELETE",
-        headers: this._headers,
+        headers: this._getHeaders(),
       });
     }
   }
