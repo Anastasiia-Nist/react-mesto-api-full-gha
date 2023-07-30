@@ -1,4 +1,3 @@
-// для консольлогов использовать 'eslint-disable-next-line no-console'
 const express = require('express');
 const mongoose = require('mongoose');
 const rateLimit = require('express-rate-limit');
