@@ -18,6 +18,9 @@ const NotFoundError = require('./errors/NotFoundError');
 
 const app = express();
 
+console.log(SERVER_PORT);
+console.log(DB);
+
 // параметры Express Rate Limit
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,

@@ -4,6 +4,7 @@ const { messages } = require('../utils/errors');
 const SECRET_KEY = require('../env.config');
 
 const authMiddleware = (req, res, next) => {
+  console.log(SECRET_KEY);
   const { authorization } = req.headers;
   if (!authorization || !authorization.startsWith('Bearer ')) {
     throw new UnauthorizedError(messages.unauthorized);
