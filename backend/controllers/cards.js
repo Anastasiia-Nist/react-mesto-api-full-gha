@@ -2,6 +2,7 @@ const Card = require('../models/card');
 const { messages } = require('../utils/errors');
 const NotFoundError = require('../errors/NotFoundError');
 const ForbiddenError = require('../errors/ForbiddenError');
+const BadRequestError = require('../errors/BadRequestError');
 
 const getCards = (req, res, next) => {
   Card.find({})
@@ -15,6 +16,13 @@ const createCard = (req, res, next) => {
 
   Card.create({ name, link, owner })
     .then((card) => res.status(201).send(card))
+    .catch((err) => {
+      if (err.name === 'ValidationError') {
+        throw new BadRequestError(messages.card.badData);
+      } else {
+        next(err);
+      }
+    })
     .catch(next);
 };
 

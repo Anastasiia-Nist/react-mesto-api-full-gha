@@ -4,6 +4,8 @@ const User = require('../models/user');
 const { messages } = require('../utils/errors');
 const { SECRET_KEY } = require('../env.config');
 const NotFoundError = require('../errors/NotFoundError');
+const BadRequestError = require('../errors/BadRequestError');
+const ConflictError = require('../errors/ConflictError');
 
 const getUsers = (req, res, next) => {
   User.find({})
@@ -63,6 +65,15 @@ const createUser = (req, res, next) => {
         email: user.email,
       });
     })
+    .catch((err) => {
+      if (err.name === 'ValidationError') {
+        throw new BadRequestError(messages.card.badData);
+      } else if (err.code === 11000) {
+        throw new ConflictError(messages.user.conflictEmail);
+      } else {
+        next(err);
+      }
+    })
     .catch(next);
 };
 
@@ -77,6 +88,13 @@ const updateUserProfile = (req, res, next) => {
         res.send(user);
       }
     })
+    .catch((err) => {
+      if (err.name === 'ValidationError' || err.name === 'CastError') {
+        throw new BadRequestError(messages.user.updateBadData);
+      } else {
+        next(err);
+      }
+    })
     .catch(next);
 };
 
@@ -89,6 +107,13 @@ const updateUserAvatar = (req, res, next) => {
         throw new NotFoundError(messages.user.notFound);
       } else {
         res.send(user);
+      }
+    })
+    .catch((err) => {
+      if (err.name === 'ValidationError' || err.name === 'CastError') {
+        throw new BadRequestError(messages.user.updateBadData);
+      } else {
+        next(err);
       }
     })
     .catch(next);
