@@ -67,14 +67,13 @@ const createUser = (req, res, next) => {
     })
     .catch((err) => {
       if (err.name === 'ValidationError') {
-        throw new BadRequestError(messages.card.badData);
+        next(new BadRequestError(messages.card.badData));
       } else if (err.code === 11000) {
-        throw new ConflictError(messages.user.conflictEmail);
+        next(new ConflictError(messages.user.conflictEmail));
       } else {
         next(err);
       }
-    })
-    .catch(next);
+    });
 };
 
 const updateUserProfile = (req, res, next) => {
@@ -90,12 +89,11 @@ const updateUserProfile = (req, res, next) => {
     })
     .catch((err) => {
       if (err.name === 'ValidationError' || err.name === 'CastError') {
-        throw new BadRequestError(messages.user.updateBadData);
+        next(new BadRequestError(messages.user.updateBadData));
       } else {
         next(err);
       }
-    })
-    .catch(next);
+    });
 };
 
 const updateUserAvatar = (req, res, next) => {
@@ -111,12 +109,11 @@ const updateUserAvatar = (req, res, next) => {
     })
     .catch((err) => {
       if (err.name === 'ValidationError' || err.name === 'CastError') {
-        throw new BadRequestError(messages.user.updateBadData);
+        next(new BadRequestError(messages.user.updateBadData));
       } else {
         next(err);
       }
-    })
-    .catch(next);
+    });
 };
 
 const login = (req, res, next) => {

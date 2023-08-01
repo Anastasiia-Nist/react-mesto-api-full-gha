@@ -18,12 +18,11 @@ const createCard = (req, res, next) => {
     .then((card) => res.status(201).send(card))
     .catch((err) => {
       if (err.name === 'ValidationError') {
-        throw new BadRequestError(messages.card.badData);
+        next(new BadRequestError(messages.card.badData));
       } else {
         next(err);
       }
-    })
-    .catch(next);
+    });
 };
 
 const deleteCard = (req, res, next) => {
