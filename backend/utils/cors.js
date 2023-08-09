@@ -1,7 +1,7 @@
 // Массив доменов, с которых разрешены кросс-доменные запросы
 const allowedCors = [
-  'https://mesto-by-anastasiia.nomoredomains.sbs',
-  'http://mesto-by-anastasiia.nomoredomains.sbs',
+  'http://a.nistratova14.fvds.ru',
+  '',
   'http://localhost:3000',
 ];
 // Значение для заголовка Access-Control-Allow-Methods по умолчанию (разрешены все типы запросов)

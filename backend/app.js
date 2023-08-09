@@ -14,7 +14,6 @@ const app = express();
 
 // защита приложения от некоторых широко известных веб-уязвимостей
 app.use(helmet());
-// ограничение кол-во запросов. Для защиты от DoS-атак.
 
 mongoose.connect(DB);
 
@@ -22,6 +21,7 @@ app.use(bodyParser.json());
 
 app.use(requestLogger);
 
+// ограничение кол-во запросов. Для защиты от DoS-атак.
 app.use(limiter);
 
 app.use(corsMiddleware);

@@ -1,6 +1,6 @@
 // API
 const dataApi = {
-  baseUrl: "https://api.mesto-by-anastasiia.nomoredomains.sbs",
+  baseUrl: "http://a.nistratova14.fvds.ru/api",
   headers: {
       "Content-Type": "application/json",
     },
