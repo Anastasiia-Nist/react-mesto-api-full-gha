@@ -34,7 +34,7 @@
 - Сelebrate;
 - Winston.
 
-## [Ссылка на репозиторий](https://github.com/Anastasiia-Nist/express-mesto-gha)
+## [Ссылка на репозиторий](https://github.com/Anastasiia-Nist/react-mesto-api-full-gha)
 
 ## Ссылки на проект
 
