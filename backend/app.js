@@ -26,7 +26,7 @@ app.use(limiter);
 
 app.use(corsMiddleware);
 
-app.use(routes);
+app.use('/api', routes);
 
 app.use(errorLogger);
 app.use(errors()); // обработчик ошибок celebrate
