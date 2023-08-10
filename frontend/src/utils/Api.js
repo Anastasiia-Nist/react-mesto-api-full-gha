@@ -1,6 +1,6 @@
 // API
 const dataApi = {
-  baseUrl: "http://a.nistratova14.fvds.ru/api",
+  baseUrl: "https://a.nistratova14.fvds.ru/api",
   headers: {
       "Content-Type": "application/json",
     },

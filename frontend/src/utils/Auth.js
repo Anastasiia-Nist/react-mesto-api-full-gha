@@ -1,4 +1,4 @@
-const BASE_URL = "http://a.nistratova14.fvds.ru/api";
+const BASE_URL = "https://a.nistratova14.fvds.ru/api";
 const BASE_HEADERS = {
   Accept: "application/json",
   "Content-Type": "application/json",
