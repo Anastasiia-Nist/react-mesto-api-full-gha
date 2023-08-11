@@ -1,5 +1,4 @@
 import React from "react";
-import pencilImg from "../images/pencil.svg";
 import Card from "../components/Card";
 import { CurrentUserContext } from "../context/CurrentUserContext";
 import avatarDefault from "../images/avatarCat.jpg";
@@ -16,11 +15,11 @@ function Main(props) {
             className="profile__avatar"
             onClick={props.onEditAvatar}
           />
-          <img
-            src={pencilImg}
-            alt="Редактировать аватар"
-            className="profile__img-hover"
-          />
+          <button
+            className="profile__button-pencil"
+            aria-label="Редактировать"
+            type="button"
+          ></button>
         </div>
         <div className="profile__info">
           <div className="profile__info-wrapper">

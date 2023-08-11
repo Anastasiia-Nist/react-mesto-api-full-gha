@@ -26,7 +26,7 @@
 @import url(./blocks/profile/profile.css);
 @import url(./blocks/profile/__img/profile__img.css);
 @import url(./blocks/profile/__avatar/profile__avatar.css);
-@import url(./blocks/profile/__img-hover/profile__img-hover.css);
+@import url(./blocks/profile/__button-pencil/profile__button-pencil.css);
 @import url(./blocks/profile/__info/profile__info.css);
 @import url(./blocks/profile/__info-wrapper/profile__info-wrapper.css);
 @import url(./blocks/profile/__name/profile__name.css);

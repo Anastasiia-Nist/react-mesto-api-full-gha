@@ -1,0 +1,15 @@
+.profile__button-pencil {
+  position: absolute;
+  border: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../../images/pencil.svg');
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 26px 26px;
+  padding: 0;
+  z-index: 0;
+}
