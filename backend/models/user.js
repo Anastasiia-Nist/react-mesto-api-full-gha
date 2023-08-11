@@ -21,19 +21,19 @@ const userSchema = new mongoose.Schema({
   },
   name: {
     type: String,
-    default: 'Жак-Ив Кусто',
+    default: 'Кот',
     minLength: 2,
     maxLength: 30,
   },
   about: {
     type: String,
-    default: 'Исследователь',
+    default: 'Исследователь дивана',
     minLength: 2,
     maxLength: 30,
   },
   avatar: {
     type: String,
-    default: 'https://pictures.s3.yandex.net/resources/jacques-cousteau_1604399756.png',
+    default: 'https://proprikol.ru/wp-content/uploads/2020/07/prikolnye-kartinki-zlyh-kotov-17.jpg',
     validate: {
       validator: (link) => validator.isURL(link),
       message: 'БД: Некорректный URL',

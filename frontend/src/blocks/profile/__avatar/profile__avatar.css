@@ -3,7 +3,7 @@
   max-width: 120px;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  object-fit: fill;
+  object-fit: cover;
   z-index: 1;
   position: relative;
 }
