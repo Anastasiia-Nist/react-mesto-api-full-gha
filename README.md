@@ -1,11 +1,12 @@
-# Проект Mesto с авторизацией и регистрацией.
+# Проект Mesto от [Яндекс.Практикума](https://practicum.yandex.ru/web/) с авторизацией и регистрацией.
 
 ### Обзор:
 **Интерактивный сайт с авторизацией и регистрацией, на котором пользователи могут делиться фотографиями, удалять их и ставить лайки**
 
-Репозиторий для приложения проекта `Mesto`, включающий фронтенд и бэкенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями. Бэкенд расположен в директории `backend/`, а фронтенд - в `frontend/`. 
-  
+Репозиторий для приложения проекта `Mesto`. Бэкенд расположен в директории `backend/`, а фронтенд - в `frontend/`.
+
 ## В этом проекте используются:
+
 ### Frontend:
 - HTML5;
 - CSS3:
@@ -13,7 +14,6 @@
   - Grid Layout;
   - Positioning;
   - Adaptive UI;
-  - Media Queries;
 - Методология БЭМ;
 - JavaScript:
   - ООП;
@@ -34,12 +34,21 @@
 - Сelebrate;
 - Winston.
 
-## [Ссылка на репозиторий](https://github.com/Anastasiia-Nist/react-mesto-api-full-gha)
+## Установка и запуск проекта:
+Клонировать репозиторий:
 
-## Ссылки на проект
+    git clone https://github.com/Anastasiia-Nist/react-mesto-api-full-gha.git
 
-IP 92.63.105.60
+В папке backend:
+Установить зависимости:
+    npm install
 
-Frontend https://a.nistratova14.fvds.ru
+Запустить проект:
+    npm run start
 
-Backend https://a.nistratova14.fvds.ru/api
+В папке frontend:
+Установить зависимости:
+    npm install
+
+Запустить проект:
+    npm run start
