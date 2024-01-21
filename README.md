@@ -5,6 +5,8 @@
 
 Репозиторий для приложения проекта `Mesto`. Бэкенд расположен в директории `backend/`, а фронтенд - в `frontend/`.
 
+https://github.com/Anastasiia-Nist/react-mesto-api-full-gha/assets/118123887/8ef30d62-fbc6-4095-9d76-7e8906d883bc
+
 ## В этом проекте используются:
 
 ### Frontend:
@@ -39,16 +41,20 @@
 
     git clone https://github.com/Anastasiia-Nist/react-mesto-api-full-gha.git
 
-В папке backend:
-Установить зависимости:
-    npm install
+В папке `backend`:
 
+Установить зависимости:
+
+    npm install
 Запустить проект:
+
     npm run start
 
-В папке frontend:
-Установить зависимости:
-    npm install
+В папке `frontend`:
 
+Установить зависимости:
+
+    npm install
 Запустить проект:
+
     npm run start
