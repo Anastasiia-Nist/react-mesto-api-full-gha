@@ -43,6 +43,7 @@ export function Login(props) {
           placeholder="Пароль"
           minLength="8"
           maxLength="15"
+          autoComplete="off"
         />
         <button
           className="auth__button-register"

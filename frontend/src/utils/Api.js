@@ -1,9 +1,10 @@
 // API
+const BASE_URL = 'http://localhost:3088/api';
 const dataApi = {
-  baseUrl: "https://a.nistratova14.fvds.ru/api",
+  baseUrl: BASE_URL,
   headers: {
-      "Content-Type": "application/json",
-    },
+    'Content-Type': 'application/json',
+  },
 };
 
 export class Api {
@@ -43,7 +44,7 @@ export class Api {
   // отправляем данные юзера на сервер
   patchUserInfo(data) {
     return this._request(`users/me/`, {
-      method: "PATCH",
+      method: 'PATCH',
       headers: this._getHeaders(),
 
       body: JSON.stringify({
@@ -55,7 +56,7 @@ export class Api {
   // отправляем данные карточки на сервер
   postNewCard(data) {
     return this._request(`cards/`, {
-      method: "POST",
+      method: 'POST',
       headers: this._getHeaders(),
       body: JSON.stringify({
         name: data.name,
@@ -67,28 +68,28 @@ export class Api {
   //удалени карточки
   deleteCard(cardId) {
     return this._request(`cards/${cardId}/`, {
-      method: "DELETE",
+      method: 'DELETE',
       headers: this._getHeaders(),
     });
   }
   // лайк и дизлайк
   likeCard(cardId) {
     return this._request(`cards/${cardId}/likes`, {
-      method: "PUT",
+      method: 'PUT',
       headers: this._getHeaders(),
     });
   }
 
   dislikeCard(cardId) {
     return this._request(`cards/${cardId}/likes`, {
-      method: "DELETE",
+      method: 'DELETE',
       headers: this._getHeaders(),
     });
   }
   // добавление аватара
   patchUserAvatar(avatar) {
     return this._request(`users/me/avatar`, {
-      method: "PATCH",
+      method: 'PATCH',
       headers: this._getHeaders(),
       body: JSON.stringify({
         avatar,
@@ -99,12 +100,12 @@ export class Api {
   changeLikeCardStatus(_id, isLiked) {
     if (isLiked) {
       return this._request(`cards/${_id}/likes`, {
-        method: "PUT",
+        method: 'PUT',
         headers: this._getHeaders(),
       });
     } else {
       return this._request(`cards/${_id}/likes`, {
-        method: "DELETE",
+        method: 'DELETE',
         headers: this._getHeaders(),
       });
     }
